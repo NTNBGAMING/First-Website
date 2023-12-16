@@ -20,3 +20,10 @@ a{  background-color: blueviolet;
     border: 2px solid red;
     border-radius: 9px;
 }
+
+
+#Navigation-1{
+display: inline;
+text-decoration: none;
+
+}

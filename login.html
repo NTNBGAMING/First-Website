@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 50px;
+      }
+      
+      form {
+        background-color: #eee;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      
+      button[type="submit"] {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      
+      #error-message {
+        color: red;
+        display: none;
+      }</style>
+</head>
+<body>
+  <h1>Login</h1>
+  <form action="#">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+    <br>
+    <br>
+    <button type="submit">Log In</button>
+  </form>
+  <p id="error-message"></p>
+
+  <script>
+    const form = document.querySelector('form');
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const errorMessage = document.getElementById('error-message');
+const users = {
+  admin: { password: 'password' },
+  NTNB: { password: 'Jihad4952' },
+  User: { password: 'user1' },
+};
+
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  // Validate username and password
+  if (!usernameInput.value || !passwordInput.value) {
+    errorMessage.textContent = 'Please enter your username and password.';
+    errorMessage.style.display = 'block';
+    return;
+  }
+
+  // Send login information to server (replace with actual server communication)
+  if (users.hasOwnProperty(usernameInput.value) && users[usernameInput.value].password === passwordInput.value) {
+  // Login successful
+    window.location.href = 'index.html';
+  }
+ 
+  else {
+    // Login failed
+    errorMessage.textContent = 'Invalid username or password.';
+    errorMessage.style.display = 'block';
+  }
+});
+
+  </script>
+</body>
+</html>
