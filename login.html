@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+ 
   <style>
     body {
         font-family: 'Poppins', sans-serif;
@@ -22,7 +23,8 @@
       }
       
       input[type="text"], input[type="password"] {
-        width: 100%;
+        width: 99%;
+       
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 3px;
@@ -32,6 +34,7 @@
         background-color: #333;
         color: white;
         padding: 10px 20px;
+      
         border: none;
         border-radius: 3px;
         cursor: pointer;
@@ -54,42 +57,7 @@
     <button type="submit">Log In</button>
   </form>
   <p id="error-message"></p>
-
-  <script>
-    const form = document.querySelector('form');
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
-const errorMessage = document.getElementById('error-message');
-const users = {
-  admin: { password: 'password' },
-  NTNB: { password: 'Jihad4952' },
-  User: { password: 'user1' },
-};
-
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  // Validate username and password
-  if (!usernameInput.value || !passwordInput.value) {
-    errorMessage.textContent = 'Please enter your username and password.';
-    errorMessage.style.display = 'block';
-    return;
-  }
-
-  // Send login information to server (replace with actual server communication)
-  if (users.hasOwnProperty(usernameInput.value) && users[usernameInput.value].password === passwordInput.value) {
-  // Login successful
-    window.location.href = 'index.html';
-  }
+<script src="script.js"></script>
  
-  else {
-    // Login failed
-    errorMessage.textContent = 'Invalid username or password.';
-    errorMessage.style.display = 'block';
-  }
-});
-
-  </script>
 </body>
 </html>
