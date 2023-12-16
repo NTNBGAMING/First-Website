@@ -1,0 +1,17 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    
+}
+p{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+a{  background-color: blueviolet;
+    color: aliceblue;
+    text-decoration: none;
+   font-weight: 600;
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    
+}
