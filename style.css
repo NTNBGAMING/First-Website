@@ -7,7 +7,7 @@ p{
     margin-top: 40px;
     margin-left: 40px;
 }
-a{  background-color: blueviolet;
+#Link-1{  background-color: blueviolet;
     color: aliceblue;
     text-decoration: none;
    font-weight: 600;
@@ -19,12 +19,99 @@ a{  background-color: blueviolet;
     text-align: center;
     border: 2px solid red;
     border-radius: 9px;
+    margin-top: 200px;
+
+}
+
+
+#Navigation > ul > li > a{
+  
+  
+    text-decoration: none;
+    background-image: linear-gradient(120deg, white, white);
+    border-radius: 5px;
+    padding: 10px 40px;
+    color: black;
+    font-weight: 700;
+}
+
+#Navigation > ul > li > a:hover{
+ 
+  
+    text-decoration: none;
+    background-image: linear-gradient(120deg, black, rgb(99, 99, 99));
+    border-radius: 5px;
+    padding: 10px 40px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
 }
 
 
-#Navigation-1{
-display: inline;
-text-decoration: none;
-text-align: right;
+
+
+nav > ul{
+    display: flex;
+    justify-content: center;
 
 }
+
+nav li{
+    list-style: none;
+}
+
+
+.Dropdown{
+    display: none;
+    position: absolute;
+}  
+
+nav > ul > li:hover > ul{
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.Dropdown li{
+
+    padding: 0;
+    margin: 20px 0px;
+}
+nav > ul > li > ul > li > a{
+    text-decoration: none;
+
+}
+nav > ul >li > ul{
+    margin: 10px 0px 10px 45px;
+}
+
+
+
+
+#Navigation > ul > li > ul > li > a{
+  
+  
+    text-decoration: none;
+    background-image: linear-gradient(120deg, white, white);
+    border-radius: 5px;
+    padding: 10px 40px;
+    color: black;
+    font-weight: 700;
+}
+
+#Navigation > ul > li > ul > li > a:hover{
+ 
+  
+    text-decoration: none;
+    background-image: linear-gradient(120deg, black, rgb(99, 99, 99));
+    border-radius: 5px;
+    padding: 10px 40px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+nav > ul > li{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+  
